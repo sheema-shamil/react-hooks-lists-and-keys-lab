@@ -1,26 +1,28 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
+import ProjectItem from "../components/ProjectItem";
 import ProjectList from "../components/ProjectList";
 
-const projects = [
-  {
+const projects = {
     id: 1,
     name: "Reciplease",
     about: "A recipe tracking app",
     technologies: ["Rails", "Bootstrap CSS"],
-  },
+  };
+
+test("renders")
   {
     id: 2,
     name: "Kibbles N Bitz",
     about: "Tinder for dogs",
     technologies: ["React", "Redux"],
-  },
+  };
   {
     id: 3,
     name: "Alienwares",
     about: "Etsy for aliens",
     technologies: ["React", "Redux", "Rails"],
-  },
+  }
 ];
 
 test("gives each <ProjectItem> a key based on the project id", () => {
